@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Classic T-Shirt",
+    "price": 15.99,
+    "description": "A comfortable and stylish T-shirt made from 100% cotton.",
+    "image": "https://example.com/tshirt1.jpg",
+    "color": "Red",
+    "size": "Small"
+  },
+  {
+    "id": 2,
+    "name": "Graphic T-Shirt",
+    "price": 19.99,
+    "description": "A bold and eye-catching T-shirt featuring a unique graphic print.",
+    "image": "https://example.com/tshirt2.jpg",
+    "color": "Green",
+    "size": "Medium"
+  },
+  {
+    "id": 3,
+    "name": "V-Neck T-Shirt",
+    "price": 12.99,
+    "description": "A stylish and comfortable T-shirt with a flattering V-neck cut.",
+    "image": "https://example.com/tshirt3.jpg",
+    "color": "Blue",
+    "size": "Large"
+  },
+  {
+    "id": 4,
+    "name": "Long Sleeve T-Shirt",
+    "price": 18.99,
+    "description": "A versatile and comfortable T-shirt with long sleeves for added warmth.",
+    "image": "https://example.com/tshirt4.jpg",
+    "color": "Black",
+    "size": "X-Large"
+  },
+  {
+    "id": 5,
+    "name": "Striped T-Shirt",
+    "price": 17.99,
+    "description": "A stylish and classic T-shirt with a bold striped pattern.",
+    "image": "https://example.com/tshirt5.jpg",
+    "color": "White",
+    "size": "Small"
+  },
+  {
+    "id": 6,
+    "name": "Athletic T-Shirt",
+    "price": 22.99,
+    "description": "A high-performance T-shirt designed for athletes and fitness enthusiasts.",
+    "image": "https://example.com/tshirt6.jpg",
+    "color": "Grey",
+    "size": "Medium"
+  },
+  {
+    "id": 7,
+    "name": "Pocket T-Shirt",
+    "price": 16.99,
+    "description": "A practical and stylish T-shirt with a convenient pocket on the front.",
+    "image": "https://example.com/tshirt7.jpg",
+    "color": "Navy",
+    "size": "Large"
+  },
+  {
+    "id": 8,
+    "name": "Tie-Dye T-Shirt",
+    "price": 21.99,
+    "description": "A fun and funky T-shirt with a colorful tie-dye pattern.",
+    "image": "https://example.com/tshirt8.jpg",
+    "color": "Pink",
+    "size": "X-Large"
+  },
+  {
+    "id": 9,
+    "name": "Henley T-Shirt",
+    "price": 14.99,
+    "description": "A stylish and casual T-shirt with a classic henley-style neckline.",
+    "image": "https://example.com/tshirt9.jpg",
+    "color": "Brown",
+    "size": "Small"
+  },{
+    "id": 10,
+    "name": "Sleeveless T-Shirt",
+    "price": 12.99,
+    "description": "A comfortable and casual T-shirt with a sleeveless design for warmer weather.",
+    "image": "https://example.com/tshirt10.jpg",
+    "color": "Yellow",
+    "size": "Medium"
+}]
