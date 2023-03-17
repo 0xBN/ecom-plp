@@ -10,6 +10,8 @@ const FilterForm = () => {
     priceRange,
     sizeFilter,
     uniqueColorList = [],
+    sortProductsByPriceLowToHigh,
+    sortProductsByPriceHighToLow,
   } = useContext(ProductsContext);
 
   return (
@@ -39,6 +41,16 @@ const FilterForm = () => {
           <ColorFilterButton key={color} color={color} />
         ))}
       </div>
+      <div>
+        <button onClick={sortProductsByPriceLowToHigh}>
+          Price: Low to High
+        </button>
+        <button onClick={sortProductsByPriceHighToLow}>
+          Price: High to Low
+        </button>
+      </div>
+      <hr />
+      <hr />
     </div>
   );
 };

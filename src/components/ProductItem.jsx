@@ -1,9 +1,9 @@
 const ProductItem = ({ name, price, image, description, sizes, color }) => {
   return (
     <div>
+      <hr />
       <h2>{name}</h2>
       <p>${price}</p>
-      <img src={image} alt={name} />
       <p>{description}</p>
       <p>Color: {color}</p>
       {sizes && (
@@ -18,6 +18,7 @@ const ProductItem = ({ name, price, image, description, sizes, color }) => {
           </ul>
         </div>
       )}
+      <img src={image} alt={name} />
     </div>
   );
 };

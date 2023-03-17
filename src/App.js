@@ -7,7 +7,8 @@ import { useContext } from 'react';
 import ResetFilterButton from './components/ResetFilterButton';
 
 const App = () => {
-  const { priceRange, sizeFilter, colorFilter } = useContext(ProductsContext);
+  const { priceRange, sizeFilter, colorFilter, sortOrder } =
+    useContext(ProductsContext);
   const testProduct = {
     name: 'Name of product',
     price: 10,
@@ -21,11 +22,14 @@ const App = () => {
     <div>
       <hr />
       <div>
-        temp stuff
-        <p>{JSON.stringify(priceRange)}</p>
-        <p>{sizeFilter}</p>
-        <p>{colorFilter}</p>
+        temp state viewer (in App.js)
+        <p>PriceRange: {JSON.stringify(priceRange)}</p>
+        <p>Size: {sizeFilter}</p>
+        <p>Color: {colorFilter}</p>
+        <p>Sort: {sortOrder}</p>
       </div>
+      <br />
+      <br />
       <ResetFilterButton />
       <hr />
       <FilterForm />

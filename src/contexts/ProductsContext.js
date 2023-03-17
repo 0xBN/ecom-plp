@@ -5,12 +5,11 @@ export const ProductsContext = createContext();
 
 export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+  const [originalOrder, setOriginalOrder] = useState([]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
   const [sizeFilter, setSizeFilter] = useState(null);
   const [colorFilter, setColorFilter] = useState(null);
   const [uniqueColorList, setUniqueColorList] = useState([]);
-
-  const [filteredProducts, setFilteredProducts] = useState([]);
 
   const [selectedFilters, setSelectedFilters] = useState({});
 
@@ -23,6 +22,7 @@ export const ProductsProvider = ({ children }) => {
   useEffect(() => {
     // Load products data from the local JSON file
     setProducts(productsData);
+    setOriginalOrder(productsData);
 
     // Extract unique colors from the loaded data
     const uniqueColors = [
@@ -31,6 +31,14 @@ export const ProductsProvider = ({ children }) => {
 
     setUniqueColorList(uniqueColors);
   }, []);
+
+  const sortProductsByPriceLowToHigh = () => {
+    setSortOrder('lowToHigh');
+  };
+
+  const sortProductsByPriceHighToLow = () => {
+    setSortOrder('highToLow');
+  };
 
   const addToCart = (product) => {
     // update cartItems and totalCost state based on the product being added to the cart
@@ -45,8 +53,6 @@ export const ProductsProvider = ({ children }) => {
       value={{
         products,
         setProducts,
-        filteredProducts,
-        setFilteredProducts,
         priceRange,
         setPriceRange,
         selectedFilters,
@@ -67,6 +73,8 @@ export const ProductsProvider = ({ children }) => {
         setUniqueColorList,
         sortOrder,
         setSortOrder,
+        sortProductsByPriceLowToHigh,
+        sortProductsByPriceHighToLow,
       }}
     >
       {children}

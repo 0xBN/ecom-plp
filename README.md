@@ -1,6 +1,6 @@
 ## PLP Page features / functionality
-- [ ] Display products, each with their name, price, image, and description.
-- [ ] Allow the user to filter the list of products based on their price range.
+- [x] Display products, each with their name, price, image, and description.
+- [x] Allow the user to filter the list of products based on their price range.
 - [ ] Allow the user to click and/or hover on a product to view additional details.
 - [ ] The page should be responsive and display properly on desktop and mobile
 devices.
@@ -12,15 +12,15 @@ devices.
 - [x] description: a brief description of the product
 - [x] image: the URL of the product image
 - [x] color: main color of the item
-- [ ] size: size of the item
+- [x] size: size of the item
 
 ## Deliverables
 - [ ] A header displaying the title of the page
-- [ ] A form allowing the user to filter the products by price range
-- [ ] A display of products, each with their name, price, image, and description.
+- [x] A form allowing the user to filter the products by price range
+- [x] A display of products, each with their name, price, image, and description.
 - [ ] A button (or functionality) to view a product's details.
 - [ ] Implement pagination for the product list.
-- [ ] Add additional filters (e.g., by color, size, etc.)
+- [x] Add additional filters (e.g., by color, size, etc.)
 - [ ] Add a shopping cart feature that allows users to add products and display the total cost.
 - [ ] Provide GitHub repo.
 - [ ] README explains how to run code and any dependencies to be installed.
