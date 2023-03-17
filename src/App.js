@@ -1,6 +1,7 @@
 import ProductItem from './components/ProductItem';
 import ProductList from './components/ProductList';
 import products from './data/products.json';
+import FilterForm from './components/FilterForm';
 
 const App = () => {
   const testProduct = {
@@ -14,7 +15,7 @@ const App = () => {
 
   return (
     <div>
-      <ProductItem product={testProduct} />
+      <FilterForm />
       <ProductList products={products} />
     </div>
   );
