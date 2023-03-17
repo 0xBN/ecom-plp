@@ -7,7 +7,8 @@ export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
   const [sizeFilter, setSizeFilter] = useState(null);
-  const [colorFilters, setColorFilters] = useState(null);
+  const [colorFilter, setColorFilter] = useState(null);
+  const [uniqueColorList, setUniqueColorList] = useState([]);
 
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -26,7 +27,7 @@ export const ProductsProvider = ({ children }) => {
       ...new Set(productsData.map((product) => product.color)),
     ];
 
-    setColorFilters(uniqueColors);
+    setUniqueColorList(uniqueColors);
   }, []);
 
   const addToCart = (product) => {
@@ -58,8 +59,10 @@ export const ProductsProvider = ({ children }) => {
         setTotalCost,
         sizeFilter,
         setSizeFilter,
-        colorFilters,
-        setColorFilters,
+        colorFilter,
+        setColorFilter,
+        uniqueColorList,
+        setUniqueColorList,
       }}
     >
       {children}

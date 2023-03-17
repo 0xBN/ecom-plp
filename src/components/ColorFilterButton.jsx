@@ -10,6 +10,7 @@ const ColorFilterButton = ({ color, isActive }) => {
 
   return (
     <button
+      data-testid={`color-filter-button`}
       className={isActive ? 'active' : ''}
       onClick={() => handleColorFilterChange(color)}
     >

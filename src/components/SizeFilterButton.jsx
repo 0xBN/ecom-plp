@@ -10,7 +10,7 @@ const SizeFilterButton = ({ size, isActive }) => {
 
   return (
     <button className={isActive ? 'active' : ''} onClick={handleClick}>
-      {size}
+      Size {size}
     </button>
   );
 };

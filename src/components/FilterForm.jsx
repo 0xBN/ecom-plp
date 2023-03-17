@@ -6,8 +6,11 @@ import ColorFilterButton from './ColorFilterButton';
 import { priceRanges, sizes } from '../data/filterOptions';
 
 const FilterForm = () => {
-  const { priceRange, sizeFilter, uniqueColorList } =
-    useContext(ProductsContext);
+  const {
+    priceRange,
+    sizeFilter,
+    uniqueColorList = [],
+  } = useContext(ProductsContext);
 
   return (
     <div>
