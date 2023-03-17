@@ -1,9 +1,11 @@
 import { useContext } from 'react';
 import { ProductsContext } from '../contexts/ProductsContext';
 import PriceRangeButton from './PriceRangeButton';
+import SizeFilterButton from './SizeFilterButton';
 
 const FilterForm = () => {
-  const { priceRange } = useContext(ProductsContext);
+  const { priceRange, currentSize, setCurrentSize } =
+    useContext(ProductsContext);
 
   const priceRanges = [
     { min: 0, max: 10 },
@@ -18,6 +20,8 @@ const FilterForm = () => {
     { min: 90, max: 100 },
   ];
 
+  const sizes = ['S', 'M', 'L'];
+
   return (
     <div>
       <h2>Filter Form</h2>
@@ -28,6 +32,16 @@ const FilterForm = () => {
             minPrice={min}
             maxPrice={max}
             isActive={min === priceRange.min && max === priceRange.max}
+          />
+        ))}
+      </div>
+      <div>
+        {sizes.map((size) => (
+          <SizeFilterButton
+            key={size}
+            size={size}
+            isActive={size === currentSize}
+            onClick={() => setCurrentSize(size)}
           />
         ))}
       </div>

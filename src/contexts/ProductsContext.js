@@ -5,7 +5,10 @@ export const ProductsContext = createContext();
 export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
+  const [sizeFilter, setSizeFilter] = useState(null);
+
   const [filteredProducts, setFilteredProducts] = useState([]);
+
   const [selectedFilters, setSelectedFilters] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -39,6 +42,8 @@ export const ProductsProvider = ({ children }) => {
         setCartItems,
         totalCost,
         setTotalCost,
+        sizeFilter,
+        setSizeFilter,
       }}
     >
       {children}
