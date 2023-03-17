@@ -1,4 +1,5 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
+import productsData from '../data/products.json';
 
 export const ProductsContext = createContext();
 
@@ -6,6 +7,7 @@ export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
   const [sizeFilter, setSizeFilter] = useState(null);
+  const [colorFilters, setColorFilters] = useState(null);
 
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -14,6 +16,18 @@ export const ProductsProvider = ({ children }) => {
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [cartItems, setCartItems] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
+
+  useEffect(() => {
+    // Load products data from the local JSON file
+    setProducts(productsData);
+
+    // Extract unique colors from the loaded data
+    const uniqueColors = [
+      ...new Set(productsData.map((product) => product.color)),
+    ];
+
+    setColorFilters(uniqueColors);
+  }, []);
 
   const addToCart = (product) => {
     // update cartItems and totalCost state based on the product being added to the cart
@@ -44,6 +58,8 @@ export const ProductsProvider = ({ children }) => {
         setTotalCost,
         sizeFilter,
         setSizeFilter,
+        colorFilters,
+        setColorFilters,
       }}
     >
       {children}
