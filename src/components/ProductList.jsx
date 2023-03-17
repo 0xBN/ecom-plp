@@ -53,7 +53,7 @@ const ProductList = ({ products }) => {
     <div>
       <h2>List</h2>
 
-      {!productList.length && <p>No products found</p>}
+      {!productList?.length && <p>No products found</p>}
       <ul>{productList}</ul>
     </div>
   );

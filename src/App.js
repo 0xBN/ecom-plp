@@ -5,36 +5,31 @@ import FilterForm from './components/FilterForm';
 import { ProductsContext } from './contexts/ProductsContext';
 import { useContext } from 'react';
 import ResetFilterButton from './components/ResetFilterButton';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import {
+  ProductListingPage,
+  ProductDetailPage,
+  ShoppingCartPage,
+  About,
+} from './pages';
 
 const App = () => {
   const { priceRange, sizeFilter, colorFilter, sortOrder } =
     useContext(ProductsContext);
-  const testProduct = {
-    name: 'Name of product',
-    price: 10,
-    image: '',
-    description: 'test description',
-    color: 'red',
-    sizes: ['S', 'M'],
-  };
 
   return (
-    <div>
-      <hr />
-      <div>
-        temp state viewer (in App.js)
-        <p>PriceRange: {JSON.stringify(priceRange)}</p>
-        <p>Size: {sizeFilter}</p>
-        <p>Color: {colorFilter}</p>
-        <p>Sort: {sortOrder}</p>
+    <BrowserRouter>
+      <div className={`bg-slate-800 text-white min-h-screen`}>
+        <Header />
+        <Routes>
+          <Route path='/' element={<ProductListingPage />} />
+          <Route path='/product/:id' element={<ProductDetailPage />} />
+          <Route path='/cart' element={<ShoppingCartPage />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
       </div>
-      <br />
-      <br />
-      <ResetFilterButton />
-      <hr />
-      <FilterForm />
-      <ProductList products={products} />
-    </div>
+    </BrowserRouter>
   );
 };
 export default App;
