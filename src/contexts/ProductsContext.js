@@ -13,6 +13,8 @@ export const ProductsProvider = ({ children }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   const [selectedFilters, setSelectedFilters] = useState({});
+
+  const [sortOrder, setSortOrder] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [cartItems, setCartItems] = useState([]);
@@ -63,6 +65,8 @@ export const ProductsProvider = ({ children }) => {
         setColorFilter,
         uniqueColorList,
         setUniqueColorList,
+        sortOrder,
+        setSortOrder,
       }}
     >
       {children}
