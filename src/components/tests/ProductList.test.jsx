@@ -1,10 +1,8 @@
 import React from 'react';
-import { render, screen, waitFor, act } from '@testing-library/react';
+import { render, screen, waitFor, fireEvent } from '@testing-library/react';
 import ProductList from '../ProductList';
-import {
-  ProductsProvider,
-  ProductsContext,
-} from '../../contexts/ProductsContext';
+import PriceRangeButton from '../PriceRangeButton';
+import { ProductsProvider } from '../../contexts/ProductsContext';
 
 jest.mock('react-router-dom', () => ({
   Link: ({ to, children }) => <a href={to}>{children}</a>,
@@ -16,6 +14,16 @@ describe('ProductList', () => {
     { id: 2, name: 'Product B', price: 20, image: 'product-b.jpg' },
     { id: 3, name: 'Product C', price: 30, image: 'product-c.jpg' },
   ];
+
+  it('renders a message when there are no products', () => {
+    render(
+      <ProductsProvider>
+        <ProductList products={[]} />
+      </ProductsProvider>
+    );
+    const noProductsMessage = screen.getByText(/no products found/i);
+    expect(noProductsMessage).toBeInTheDocument();
+  });
 
   it('renders a list of products', async () => {
     render(
@@ -52,29 +60,27 @@ describe('ProductList', () => {
     expect(productListItems[2]).toContainHTML('<img src="product-c.jpg"');
   });
 
-  it('renders a message when there are no products', () => {
+  it('renders a list of products within the provided price range', async () => {
     render(
       <ProductsProvider>
-        <ProductList products={[]} />
+        <PriceRangeButton minPrice={10} maxPrice={20} />
+        <ProductList products={products} />
       </ProductsProvider>
     );
-    const noProductsMessage = screen.getByText(/no products found/i);
-    expect(noProductsMessage).toBeInTheDocument();
-  });
 
-  it('renders a list of products within the provided price range', async () => {
-    const priceRange = { min: 15, max: 25 };
-    render(
-      <ProductsContext.Provider value={{ priceRange }}>
-        <ProductList products={products} />
-      </ProductsContext.Provider>
-    );
     const productList = screen.getByRole('list');
     expect(productList).toBeInTheDocument();
+
+    const priceRangeButton = screen.getByRole('button', {
+      name: /\$10 - \$20/,
+    });
+    fireEvent.click(priceRangeButton);
+
     await waitFor(() => {
       const productItems = screen.getAllByRole('listitem');
-      expect(productItems).toHaveLength(1);
+      expect(productItems).toHaveLength(2);
     });
   });
+
   // END
 });

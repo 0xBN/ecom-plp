@@ -4,13 +4,20 @@ import { useContext } from 'react';
 import { ProductsContext } from '../contexts/ProductsContext';
 
 const ProductList = ({ products }) => {
-  const { priceRange } = useContext(ProductsContext);
+  const { priceRange, sizeFilter, colorFilter } = useContext(ProductsContext);
 
   const filteredProducts = products.filter((product) => {
-    return product.price >= priceRange.min && product.price <= priceRange.max;
+    const priceInRange =
+      product.price >= priceRange.min && product.price <= priceRange.max;
+    const sizeMatch =
+      sizeFilter === null ||
+      (product.sizes && product.sizes.includes(sizeFilter));
+
+    const colorMatch = colorFilter === null || product.color === colorFilter;
+    return priceInRange && sizeMatch && colorMatch;
   });
 
-  const productList = filteredProducts.map((product) => (
+  const productList = filteredProducts?.map((product) => (
     <li key={product.id}>
       <Link to={`/product/${product.id}`}>
         <ProductItem
@@ -28,7 +35,7 @@ const ProductList = ({ products }) => {
   return (
     <div>
       <h2>List</h2>
-      {!products.length && <p>No products found</p>}
+      {!productList.length && <p>No products found</p>}
       <ul>{productList}</ul>
     </div>
   );

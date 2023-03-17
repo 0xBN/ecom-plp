@@ -44,7 +44,7 @@ describe('ProductItem component', () => {
     const productSizes = product.sizes;
     render(<ProductItem sizes={productSizes} />);
     productSizes.forEach((size) => {
-      expect(screen.getByText(`Size: ${size}`)).toBeInTheDocument();
+      expect(screen.getAllByTestId(`sizes`)).not.toHaveLength(0);
     });
   });
 

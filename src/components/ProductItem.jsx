@@ -11,7 +11,9 @@ const ProductItem = ({ name, price, image, description, sizes, color }) => {
           <p>Available sizes:</p>
           <ul>
             {sizes.map((size) => (
-              <li key={size}>Size: {size}</li>
+              <li key={size} data-testid='sizes'>
+                {size}
+              </li>
             ))}
           </ul>
         </div>

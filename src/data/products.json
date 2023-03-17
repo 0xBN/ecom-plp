@@ -6,7 +6,7 @@
     "description": "A comfortable and stylish T-shirt made from 100% cotton.",
     "image": "https://images.unsplash.com/photo-1634849112476-88cb7e60392b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=412&q=80",
     "color": "Red",
-    "size": "Small"
+    "sizes": ["S"]
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "description": "A bold and eye-catching T-shirt featuring a unique graphic print.",
     "image": "https://images.pexels.com/photos/2650170/pexels-photo-2650170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "color": "Green",
-    "size": "Medium"
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "description": "A stylish and comfortable collar tee with a for a crisp look.",
     "image": "https://images.unsplash.com/photo-1604006852748-903fccbc4019?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     "color": "Blue",
-    "size": "Large"
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "description": "A versatile and comfortable shirt with long sleeves for added warmth.",
     "image": "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     "color": "Orange",
-    "size": "X-Large"
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "description": "A stylish and classic T-shirt with a bold striped pattern.",
     "image": "https://images.unsplash.com/photo-1530341376087-d373e7cefa72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
     "color": "Orange",
-    "size": "Small"
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@
     "description": "A high-performance T-shirt designed for athletes and fitness enthusiasts.",
     "image": "https://images.unsplash.com/photo-1491756975177-a13d74ed1e2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80",
     "color": "Grey",
-    "size": "Medium"
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "description": "A practical and stylish T-shirt with a convenient pocket on the front.",
     "image": "https://images.pexels.com/photos/428311/pexels-photo-428311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "color": "Navy",
-    "size": "Large"
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "description": "A fun and funky T-shirt with a colorful tie-dye pattern.",
     "image": "https://images.pexels.com/photos/5806884/pexels-photo-5806884.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "color": "Multiple",
-    "size": "X-Large"
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "description": "A stylish and casual T-shirt with a classic henley-style neckline.",
     "image": "https://images.pexels.com/photos/9558787/pexels-photo-9558787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "color": "Brown",
-    "size": "Small"
+    "sizes": ["S", "M", "L", "XL"]
   },{
     "id": 10,
     "name": "Sleeveless T-Shirt",
@@ -86,5 +86,5 @@
     "description": "A comfortable and casual T-shirt with a sleeveless design for warmer weather.",
     "image": "https://images.pexels.com/photos/10318036/pexels-photo-10318036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "color": "Yellow",
-    "size": "Medium"
+    "sizes": ["S", "M", "L", "XL"]
 }]

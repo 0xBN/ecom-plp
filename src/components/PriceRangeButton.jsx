@@ -8,8 +8,8 @@ const PriceRangeButton = ({ minPrice, maxPrice, isActive }) => {
 
   const { setPriceRange } = useContext(ProductsContext);
 
-  const handlePriceRangeClick = (min, max) => {
-    setPriceRange({ min, max });
+  const handlePriceRangeClick = () => {
+    setPriceRange({ min: minPrice, max: maxPrice });
   };
 
   const buttonText = minPrice === 0 ? 'Below $10' : `${min} - ${max}`;

@@ -11,4 +11,4 @@ export const priceRanges = [
   { min: 90, max: 100 },
 ];
 
-export const sizes = ['S', 'M', 'L'];
+export const sizes = ['S', 'M', 'L', 'XL'];
