@@ -2,25 +2,12 @@ import { useContext } from 'react';
 import { ProductsContext } from '../contexts/ProductsContext';
 import PriceRangeButton from './PriceRangeButton';
 import SizeFilterButton from './SizeFilterButton';
+import ColorFilterButton from './ColorFilterButton';
+import { priceRanges, sizes } from '../data/filterOptions';
 
 const FilterForm = () => {
-  const { priceRange, currentSize, setCurrentSize } =
+  const { priceRange, sizeFilter, uniqueColorList } =
     useContext(ProductsContext);
-
-  const priceRanges = [
-    { min: 0, max: 10 },
-    { min: 10, max: 20 },
-    { min: 20, max: 30 },
-    { min: 30, max: 40 },
-    { min: 40, max: 50 },
-    { min: 50, max: 60 },
-    { min: 60, max: 70 },
-    { min: 70, max: 80 },
-    { min: 80, max: 90 },
-    { min: 90, max: 100 },
-  ];
-
-  const sizes = ['S', 'M', 'L'];
 
   return (
     <div>
@@ -40,9 +27,13 @@ const FilterForm = () => {
           <SizeFilterButton
             key={size}
             size={size}
-            isActive={size === currentSize}
-            onClick={() => setCurrentSize(size)}
+            isActive={size === sizeFilter}
           />
+        ))}
+      </div>
+      <div>
+        {uniqueColorList.map((color) => (
+          <ColorFilterButton key={color} color={color} />
         ))}
       </div>
     </div>

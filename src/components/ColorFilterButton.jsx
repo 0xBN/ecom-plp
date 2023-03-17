@@ -4,12 +4,15 @@ import { ProductsContext } from '../contexts/ProductsContext';
 const ColorFilterButton = ({ color, isActive }) => {
   const { setColorFilter } = useContext(ProductsContext);
 
-  const handleClick = () => {
+  const handleColorFilterChange = (color) => {
     setColorFilter(color);
   };
 
   return (
-    <button className={isActive ? 'active' : ''} onClick={handleClick}>
+    <button
+      className={isActive ? 'active' : ''}
+      onClick={() => handleColorFilterChange(color)}
+    >
       {color}
     </button>
   );
