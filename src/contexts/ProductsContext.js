@@ -4,6 +4,7 @@ export const ProductsContext = createContext();
 
 export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
+  const [priceRange, setPriceRange] = useState({ min: 0, max: 1000 });
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedFilters, setSelectedFilters] = useState({});
   const [currentPage, setCurrentPage] = useState(1);
@@ -23,14 +24,21 @@ export const ProductsProvider = ({ children }) => {
     <ProductsContext.Provider
       value={{
         products,
+        setProducts,
         filteredProducts,
+        setFilteredProducts,
+        priceRange,
+        setPriceRange,
         selectedFilters,
+        setSelectedFilters,
         currentPage,
+        setCurrentPage,
         itemsPerPage,
+        setItemsPerPage,
         cartItems,
+        setCartItems,
         totalCost,
-        addToCart,
-        removeFromCart,
+        setTotalCost,
       }}
     >
       {children}

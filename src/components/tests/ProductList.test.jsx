@@ -1,6 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor, act } from '@testing-library/react';
 import ProductList from '../ProductList';
+import {
+  ProductsProvider,
+  ProductsContext,
+} from '../../contexts/ProductsContext';
 
 jest.mock('react-router-dom', () => ({
   Link: ({ to, children }) => <a href={to}>{children}</a>,
@@ -13,16 +17,28 @@ describe('ProductList', () => {
     { id: 3, name: 'Product C', price: 30, image: 'product-c.jpg' },
   ];
 
-  it('renders a list of products', () => {
-    render(<ProductList products={products} />);
+  it('renders a list of products', async () => {
+    render(
+      <ProductsProvider>
+        <ProductList products={products} />
+      </ProductsProvider>
+    );
     const productList = screen.getByRole('list');
     expect(productList).toBeInTheDocument();
-    const productItems = screen.getAllByRole('listitem');
-    expect(productItems).toHaveLength(3);
+
+    // Wait for the product items to appear
+    await waitFor(() => {
+      const productItems = screen.getAllByRole('listitem');
+      expect(productItems).toHaveLength(3);
+    });
   });
 
   it('renders the name, price, and image of each product', () => {
-    render(<ProductList products={products} />);
+    render(
+      <ProductsProvider>
+        <ProductList products={products} />
+      </ProductsProvider>
+    );
     const productListItems = screen.getAllByRole('listitem');
     expect(productListItems).toHaveLength(3);
     expect(productListItems[0]).toHaveTextContent('Product A');
@@ -37,10 +53,28 @@ describe('ProductList', () => {
   });
 
   it('renders a message when there are no products', () => {
-    render(<ProductList products={[]} />);
+    render(
+      <ProductsProvider>
+        <ProductList products={[]} />
+      </ProductsProvider>
+    );
     const noProductsMessage = screen.getByText(/no products found/i);
     expect(noProductsMessage).toBeInTheDocument();
   });
 
+  it('renders a list of products within the provided price range', async () => {
+    const priceRange = { min: 15, max: 25 };
+    render(
+      <ProductsContext.Provider value={{ priceRange }}>
+        <ProductList products={products} />
+      </ProductsContext.Provider>
+    );
+    const productList = screen.getByRole('list');
+    expect(productList).toBeInTheDocument();
+    await waitFor(() => {
+      const productItems = screen.getAllByRole('listitem');
+      expect(productItems).toHaveLength(1);
+    });
+  });
   // END
 });

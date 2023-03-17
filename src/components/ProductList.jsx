@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom';
 import ProductItem from './ProductItem';
+import { useContext } from 'react';
+import { ProductsContext } from '../contexts/ProductsContext';
 
 const ProductList = ({ products }) => {
-  const productList = products.map((product) => (
+  const { priceRange } = useContext(ProductsContext);
+
+  const filteredProducts = products.filter((product) => {
+    return product.price >= priceRange.min && product.price <= priceRange.max;
+  });
+
+  const productList = filteredProducts.map((product) => (
     <li key={product.id}>
       <Link to={`/product/${product.id}`}>
         <ProductItem
