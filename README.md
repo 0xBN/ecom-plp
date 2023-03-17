@@ -6,12 +6,12 @@
 devices.
 
 ## JSON file products.json
-- [ ] id: a unique identifier for the product
-- [ ] name: the name of the product
-- [ ] price: the price of the product
-- [ ] description: a brief description of the product
-- [ ] image: the URL of the product image
-- [ ] color: main color of the item
+- [x] id: a unique identifier for the product
+- [x] name: the name of the product
+- [x] price: the price of the product
+- [x] description: a brief description of the product
+- [x] image: the URL of the product image
+- [x] color: main color of the item
 - [ ] size: size of the item
 
 ## Deliverables
