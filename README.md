@@ -1,6 +1,6 @@
 ## Links
 
-- [Deploymed via AWS S3](http://chromatic-threads.s3-website.us-east-2.amazonaws.com/cart)
+- [Deploymed via AWS S3](http://chromatic-threads.s3-website.us-east-2.amazonaws.com/)
 - [Github Repo (source code)](https://github.com/0xBN/ecom-plp)
 
 ## Preview
