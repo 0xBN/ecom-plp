@@ -23,7 +23,7 @@ const ResetFilterButton = () => {
   return (
     <button
       onClick={handleResetClick}
-      className={`border bg-red-800 rounded-md hover:bg-red-500 `}
+      className={`border bg-red-800 rounded-md hover:bg-red-500 text-white font-bold p-2 w-full`}
     >
       Reset Filters
     </button>

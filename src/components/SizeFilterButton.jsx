@@ -9,7 +9,10 @@ const SizeFilterButton = ({ size, isActive }) => {
   };
 
   return (
-    <button className={isActive ? 'active' : ''} onClick={handleClick}>
+    <button
+      className={`${isActive ? 'active' : ''} border`}
+      onClick={handleClick}
+    >
       Size {size}
     </button>
   );

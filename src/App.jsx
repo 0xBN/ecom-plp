@@ -10,14 +10,16 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className={`bg-gray-700 text-white min-h-screen`}>
+      <div className={`bg-gray-700 text-white flex flex-col min-h-screen`}>
         <Header />
-        <Routes>
-          <Route path='/' element={<ProductListingPage />} />
-          <Route path='/product/:id' element={<ProductDetailPage />} />
-          <Route path='/cart' element={<ShoppingCartPage />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
+        <div className={`grow`}>
+          <Routes>
+            <Route path='/' element={<ProductListingPage />} />
+            <Route path='/product/:id' element={<ProductDetailPage />} />
+            <Route path='/cart' element={<ShoppingCartPage />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </BrowserRouter>

@@ -27,6 +27,7 @@ const ProductDetailPage = () => {
         name: product.name,
         price: product.price,
         size: selectedSize,
+        image: product.image,
       });
       setSelectedSize('');
       setShowAddedMessage(true);
@@ -95,7 +96,9 @@ const ProductDetailPage = () => {
             </button>
           )}
           {showAddedMessage && (
-            <p className={`p-4 font-bold bg-yellow-600`}>Item added!</p>
+            <p className={`p-4 font-bold rounded-sm bg-yellow-600`}>
+              Item added!
+            </p>
           )}
         </div>
       </div>

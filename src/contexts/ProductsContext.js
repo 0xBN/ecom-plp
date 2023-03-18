@@ -79,6 +79,7 @@ export const ProductsProvider = ({ children }) => {
         quantity: 1,
         totalCost: product.price,
         size: product.size,
+        image: product.image,
       };
       console.log({ newCartItem });
       setCartItems((prevCartItems) => [...prevCartItems, newCartItem]);

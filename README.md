@@ -2,15 +2,17 @@
 - [ ] Product Detail Page
 - [ ] Make it look neat, add an Add To Cart
 - [ ] Shopping Cart Page
-- [ ] Include a small pic
-- [ ] Check out button is an alert?
+- [x] Include a small pic
+- [ ] Clicking check out pops up an alert message, saying feature not yet implemented.
 - [ ] ESLint A11y
+- [ ] Add more items?
+- [ ] Change VIEW CART button to match theme (green/blue)
 
 ## PLP Page features / functionality
 - [x] Display products, each with their name, price, image, and description.
 - [x] Allow the user to filter the list of products based on their price range.
 - [x] Allow the user to click and/or hover on a product to view additional details.
-- [ ] The page should be responsive and display properly on desktop and mobile
+- [x] The page should be responsive and display properly on desktop and mobile
 devices.
 
 ## JSON file products.json

@@ -16,7 +16,7 @@ const PriceRangeButton = ({ minPrice, maxPrice, isActive }) => {
 
   return (
     <button
-      className={isActive ? 'active' : ''}
+      className={`${isActive ? 'active' : ''} border`}
       onClick={handlePriceRangeClick}
     >
       {buttonText}
