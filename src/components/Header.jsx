@@ -22,9 +22,12 @@ const Header = () => {
     sortProductsByPriceLowToHigh,
     sortProductsByPriceHighToLow,
   } = useContext(ProductsContext);
+
+  const totalItems = cartItems.reduce((acc, val) => (acc += val.quantity), 0);
+
   return (
     <nav className={`md:flex justify-between sticky top-0 z-50`}>
-      <div className='navbar bg-base-100 justify-between'>
+      <div className='navbar justify-between bg-gradient-to-r from-blue-500 to-teal-700 drop-shadow-md'>
         {/* MAIN */}
         <div className='dropdown '>
           <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
@@ -106,20 +109,18 @@ const Header = () => {
             <label tabIndex={0} className='btn btn-ghost btn-circle'>
               <div className='indicator'>
                 <CartSVG />
-                <span className='badge badge-sm indicator-item bg-blue-300 text-black'>
-                  {cartItems.length}
+                <span className='badge badge-sm indicator-item bg-red-800 text-white'>
+                  {totalItems}
                 </span>
               </div>
             </label>
             <div
               tabIndex={0}
-              className='mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow border'
+              className='mt-3 card card-compact dropdown-content w-40 bg-base-100 shadow border grid place-content-center'
             >
               <div className='card-body'>
-                <span className='font-bold text-lg'>
-                  {cartItems.length} Items
-                </span>
-                <span className='text-pink-400'>
+                <span className='font-bold text-lg'>{totalItems} Items</span>
+                <span className='text-white'>
                   Subtotal: ${totalCost.toFixed(2)}
                 </span>
                 <div className='card-actions'>

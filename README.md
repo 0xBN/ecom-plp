@@ -1,6 +1,10 @@
 ## Current To Do
 - [ ] Product Detail Page
+- [ ] Make it look neat, add an Add To Cart
 - [ ] Shopping Cart Page
+- [ ] Include a small pic
+- [ ] Check out button is an alert?
+- [ ] ESLint A11y
 
 ## PLP Page features / functionality
 - [x] Display products, each with their name, price, image, and description.

@@ -7,8 +7,8 @@ const ProductListingPage = () => {
   const { priceRange, sizeFilter, colorFilter, sortOrder, products } =
     useContext(ProductsContext);
   return (
-    <div>
-      <div className={`relative`}>
+    <div className={`max-w-7xl mx-auto`}>
+      <div className={`relative `}>
         <img
           src='https://images.pexels.com/photos/430207/pexels-photo-430207.jpeg'
           alt='geometric shapes'
