@@ -144,7 +144,7 @@ const ProductDetailPage = () => {
       className={`max-w-5xl mx-auto flex md:flex-row flex-col min-h-[calc(100vh-120px)] md:justify-evenly md:gap-8 gap-4 md:p-4`}
     >
       <div>{imageArea}</div>
-      <div>{detailArea}</div>
+      <div className={`grow`}>{detailArea}</div>
     </div>
   );
 };
