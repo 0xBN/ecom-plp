@@ -43,12 +43,12 @@ const ShoppingCart = () => {
   const cartItemsMap = cartItems.map((item) => (
     <tr className={`border`} key={item.id + item.size}>
       <td
-        className={`hover:underline border rounded-md text-center flex justify-center items-center hover:bg-emerald-900`}
+        className={`hover:underline border rounded-md text-center flex justify-center items-center hover:bg-gradient-to-r from-blue-500 to-teal-700 w-35 h-35 md:w-44 md:h-44 mx-auto py-4`}
       >
         <Link to={`/product/${item.id}`}>
           <span>
             <img
-              className={`w-28 h-28 md:w-32 md:h-32 object-cover`}
+              className={`w-28 h-28 md:w-32 md:h-32 object-cover rounded-sm`}
               src={item.image}
               alt=''
             />
@@ -57,7 +57,7 @@ const ShoppingCart = () => {
         </Link>
       </td>
       <td className='text-center'>{item.size}</td>
-      <td className='text-center'>${item.price.toFixed(2)}</td>
+
       <td className='text-center'>
         <input
           type='number'
@@ -67,10 +67,11 @@ const ShoppingCart = () => {
           }
           min='1'
           name='quantity'
-          className={`w-10 h-10 bg-emerald-900 rounded-md text-center border font-bold`}
+          className={`w-10 h-10 rounded-md text-center shadow-sm shadow-black/50 font-bold text-black bg-white`}
         />
       </td>
-      <td className={`translate-y-0.5 translate-x-4 `}>
+      <td className='text-center'>${item.price.toFixed(2)}</td>
+      <td className={`translate-y-0.5 translate-x-1 `}>
         <button onClick={() => handleRemoveClick(item.id)}>
           <RemoveItemSVG />
         </button>
@@ -81,10 +82,10 @@ const ShoppingCart = () => {
   const cartTableHead = (
     <thead>
       <tr>
-        <th>Product</th>
+        <th>Item</th>
         <th>Size</th>
-        <th>Each</th>
         <th>Qty</th>
+        <th>Each</th>
       </tr>
     </thead>
   );
@@ -93,7 +94,7 @@ const ShoppingCart = () => {
   );
 
   const cartTable = (
-    <table className='border-spacing-1 divide-y divide-gray-200 border-separate mx-auto'>
+    <table className='border-spacing-1 divide-y divide-gray-200 border-separate mx-auto w-full max-w-3xl'>
       {cartTableHead}
       {cartTableBody}
     </table>

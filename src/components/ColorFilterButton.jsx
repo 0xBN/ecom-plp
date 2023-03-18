@@ -23,7 +23,7 @@ const ColorFilterButton = ({ color, isActive }) => {
 
 ColorFilterButton.propTypes = {
   color: PropTypes.string.isRequired,
-  isActive: PropTypes.bool.isRequired,
+  isActive: PropTypes.bool,
 };
 
 export default ColorFilterButton;

@@ -6,7 +6,7 @@
 - [x] Clicking check out pops up an alert message, saying feature not yet implemented.
 - [x] ESLint A11y
 - [ ] Add more items?
-- [ ] Change VIEW CART button to match theme (green/blue)
+- [x] Change VIEW CART button to match theme (green/blue)
 
 ## PLP Page features / functionality
 - [x] Display products, each with their name, price, image, and description.
@@ -37,11 +37,10 @@ devices.
 - [ ] Additional notes
 
 ## Other checklist
-- [ ] Fix favicon
-- [ ] Update metadata
+- [x] Fix favicon
+- [x] Update metadata
 - [ ] Upload prototype / wireframe
-- [ ] Guest checkout for now
-- [ ] Link to "create an account"
+- [x] Guest checkout for now
 
 ## Evaluation
 - Your ability to create and manipulate JSON data

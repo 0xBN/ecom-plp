@@ -8,7 +8,7 @@ const ShoppingCartPage = () => {
 
   const checkoutButton = totalCost !== 0 && (
     <button
-      className={`border border-slate-400 bg-emerald-800 font-bold rounded-md p-4 w-full mx-auto sticky bottom-0 z-10 hover:brightness-125 text-2xl`}
+      className={`shadow-sm shadow-black/50 w-full bg-emerald-800 font-bold rounded-md p-4 sticky bottom-0 -translate-y-1 z-10 hover:brightness-125 text-2xl md:w-1/2 md:mx-auto`}
       onClick={handleCheckout}
     >
       Checkout ${totalCost.toFixed(2)}
@@ -17,10 +17,10 @@ const ShoppingCartPage = () => {
 
   return (
     <div className={`min-h-[calc(100vh-120px)] flex flex-col relative`}>
-      <div>
+      <div className={`p-2`}>
         <ShoppingCart />
       </div>
-      <div>{checkoutButton}</div>
+      <>{checkoutButton}</>
     </div>
   );
 };

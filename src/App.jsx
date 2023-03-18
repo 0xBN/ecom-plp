@@ -12,7 +12,7 @@ const App = () => {
   return (
     <Router>
       <div
-        className={`bg-gray-700 text-white flex flex-col min-h-[calc(100vh-88px)]`}
+        className={`bg-gray-700 text-white flex flex-col min-h-[calc(100vh-88px)] overflow-x-clip`}
       >
         <Header />
         <div className={``}>
