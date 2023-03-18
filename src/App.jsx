@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
 import {
   ProductListingPage,
@@ -9,10 +10,12 @@ import {
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className={`bg-gray-700 text-white flex flex-col min-h-screen`}>
+    <Router>
+      <div
+        className={`bg-gray-700 text-white flex flex-col min-h-[calc(100vh-88px)]`}
+      >
         <Header />
-        <div className={`grow`}>
+        <div className={``}>
           <Routes>
             <Route path='/' element={<ProductListingPage />} />
             <Route path='/product/:id' element={<ProductDetailPage />} />
@@ -22,7 +25,7 @@ const App = () => {
         </div>
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 export default App;

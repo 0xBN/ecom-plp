@@ -7,4 +7,6 @@ export { default as SizeFilterButton } from './SizeFilterButton';
 export { default as ColorFilterButton } from './ColorFilterButton';
 export { default as Footer } from './Footer';
 export { default as Header } from './Header';
+export { default as FilterMenu } from './FilterMenu';
+export { default as CartMenu } from './CartMenu';
 // export { default as About } from './About';

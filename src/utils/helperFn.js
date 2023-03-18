@@ -4,3 +4,12 @@ export const formatPrice = (price) => {
   }
   return `$${Number(price)}`;
 };
+
+export const handleMenuClick = () => {
+  const elem = document.activeElement;
+  if (elem) {
+    setTimeout(() => {
+      elem?.blur();
+    }, 150);
+  }
+};

@@ -12,7 +12,6 @@ const ResetFilterButton = () => {
   } = useContext(ProductsContext);
 
   const handleResetClick = () => {
-    console.log({ originalOrder });
     setPriceRange({ min: 0, max: 100 });
     setSizeFilter(null);
     setColorFilter(null);

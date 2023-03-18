@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { formatPrice } from '../utils/helperFn';
 import { ProductsContext } from '../contexts/ProductsContext';
+import PropTypes from 'prop-types';
 
 const PriceRangeButton = ({ minPrice, maxPrice, isActive }) => {
   const min = formatPrice(minPrice);
@@ -22,6 +23,12 @@ const PriceRangeButton = ({ minPrice, maxPrice, isActive }) => {
       {buttonText}
     </button>
   );
+};
+
+PriceRangeButton.propTypes = {
+  minPrice: PropTypes.number.isRequired,
+  maxPrice: PropTypes.number.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };
 
 export default PriceRangeButton;

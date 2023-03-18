@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { createContext, useState, useEffect } from 'react';
 import productsData from '../data/products.json';
 
@@ -29,7 +30,6 @@ export const ProductsProvider = ({ children }) => {
     const uniqueColors = [
       ...new Set(productsData.map((product) => product.color)),
     ];
-
     setUniqueColorList(uniqueColors);
 
     // Retrieve cart data from localStorage, if it exists
@@ -48,13 +48,8 @@ export const ProductsProvider = ({ children }) => {
     localStorage.setItem('cart', JSON.stringify(cartData));
   }, [cartItems, totalCost, sizesTotalCost]);
 
-  const sortProductsByPriceLowToHigh = () => {
-    setSortOrder('lowToHigh');
-  };
-
-  const sortProductsByPriceHighToLow = () => {
-    setSortOrder('highToLow');
-  };
+  const sortProductsByPriceLowToHigh = () => setSortOrder('lowToHigh');
+  const sortProductsByPriceHighToLow = () => setSortOrder('highToLow');
 
   const addToCart = (product) => {
     // Check if product with the same id and size already exists in the cart
@@ -81,11 +76,9 @@ export const ProductsProvider = ({ children }) => {
         size: product.size,
         image: product.image,
       };
-      console.log({ newCartItem });
+
       setCartItems((prevCartItems) => [...prevCartItems, newCartItem]);
       setTotalCost((prevTotalCost) => prevTotalCost + product.price);
-      console.log({ cartItems });
-      console.log('added to cart');
     }
   };
   const removeFromCart = (productId) => {
@@ -123,11 +116,9 @@ export const ProductsProvider = ({ children }) => {
       const { size, totalCost } = item;
       const index = sizes.findIndex((s) => s.size === size);
 
-      if (index === -1) {
-        sizes.push({ size, totalCost });
-      } else {
-        sizes[index].totalCost += totalCost;
-      }
+      index === -1
+        ? sizes.push({ size, totalCost })
+        : (sizes[index].totalCost += totalCost);
 
       return sizes;
     }, []);
@@ -142,11 +133,9 @@ export const ProductsProvider = ({ children }) => {
       const product = products.find((p) => p.id === id);
       const { price } = product;
 
-      if (acc[size]) {
-        acc[size] += price * quantity;
-      } else {
-        acc[size] = price * quantity;
-      }
+      acc[size]
+        ? (acc[size] += price * quantity)
+        : (acc[size] = price * quantity);
 
       return acc;
     }, {});
@@ -195,4 +184,8 @@ export const ProductsProvider = ({ children }) => {
       {children}
     </ProductsContext.Provider>
   );
+};
+
+ProductsProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

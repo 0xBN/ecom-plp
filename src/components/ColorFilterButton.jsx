@@ -1,16 +1,11 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { ProductsContext } from '../contexts/ProductsContext';
 
 const ColorFilterButton = ({ color, isActive }) => {
   const { setColorFilter } = useContext(ProductsContext);
 
-  const handleColorFilterChange = (color) => {
-    setColorFilter(color);
-  };
-
-  const colorStyle = {
-    backgroundColor: color,
-  };
+  const handleColorFilterChange = (color) => setColorFilter(color);
 
   return (
     <button
@@ -20,10 +15,15 @@ const ColorFilterButton = ({ color, isActive }) => {
     >
       <div
         className={`w-10 h-10 rounded-md border border-gray-500`}
-        style={colorStyle}
+        style={{ backgroundColor: color }}
       />
     </button>
   );
+};
+
+ColorFilterButton.propTypes = {
+  color: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };
 
 export default ColorFilterButton;

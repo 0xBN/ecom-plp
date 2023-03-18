@@ -50,7 +50,7 @@
     "price": 22.99,
     "description": "A high-performance T-shirt designed for athletes and fitness enthusiasts.",
     "image": "https://images.unsplash.com/photo-1491756975177-a13d74ed1e2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80",
-    "color": "Grey",
+    "color": "Gray",
     "sizes": ["S", "M", "L", "XL"]
   },
   {
@@ -87,4 +87,74 @@
     "image": "https://images.pexels.com/photos/10318036/pexels-photo-10318036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "color": "Yellow",
     "sizes": ["S", "M", "L", "XL"]
+}, {
+  "id": 11,
+  "name": "Hooded Sweatshirt",
+  "price": 39.99,
+  "description": "A warm and comfortable hooded sweatshirt made from a soft cotton blend.",
+  "image": "https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "color": "Gray",
+  "sizes": ["S", "M", "L", "XL"]
+},
+{
+  "id": 12,
+  "name": "Polo Shirt",
+  "price": 29.99,
+  "description": "A classic and stylish polo shirt made from a comfortable cotton blend.",
+  "image": "https://images.unsplash.com/photo-1625910513399-c9fcba54338c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "color": "Black",
+  "sizes": ["S", "M", "L", "XL"]
+},
+{
+  "id": 13,
+  "name": "Flannel Shirt",
+  "price": 29.99,
+  "description": "A warm and cozy flannel shirt with a classic plaid pattern.",
+  "image": "https://images.unsplash.com/photo-1676057722037-90055ca20f2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80",
+  "color": "Brown",
+  "sizes": ["S", "M", "L", "XL"]
+},
+{
+  "id": 14,
+  "name": "Hoodie",
+  "price": 24.99,
+  "description": "A comfortable and stylish hoodie made from a soft cotton blend.",
+  "image": "https://images.unsplash.com/photo-1564557287817-3785e38ec1f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "color": "Gray",
+  "sizes": ["S", "M", "L", "XL"]
+}, {
+  "id": 15,
+  "name": "V-Neck T-Shirt",
+  "price": 13.99,
+  "description": "A classic and stylish T-shirt with a v-neckline.",
+  "image": "https://images.unsplash.com/photo-1671438118117-db657242c778?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "color": "White",
+  "sizes": ["S", "M", "L"]
+},
+{
+  "id": 16,
+  "name": "White T-Shirt",
+  "price": 10.99,
+  "description": "A comfortable and casual T-shirt.",
+  "image": "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "color": "White",
+  "sizes": ["S", "M", "L"]
+},
+{
+  "id": 17,
+  "name": "Muscle Tank",
+  "price": 18.99,
+  "description": "A sleeveless and fitted tank top designed for gym workouts.",
+  "image": "https://images.unsplash.com/photo-1578229353624-a4007142da75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+  "color": "Red",
+  "sizes": ["S", "M", "L", "XL"]
+},
+{
+  "id": 18,
+  "name": "Oversized T-Shirt",
+  "price": 23.99,
+  "description": "A loose and comfortable T-shirt with an oversized fit.",
+  "image": "https://images.unsplash.com/photo-1653483233071-546b9480f16b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "color": "Orange",
+  "sizes": ["S", "M", "L"]
 }]

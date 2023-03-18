@@ -1,10 +1,10 @@
 ## Current To Do
-- [ ] Product Detail Page
-- [ ] Make it look neat, add an Add To Cart
-- [ ] Shopping Cart Page
+- [x] Product Detail Page
+- [x] Make it look neat, add an Add To Cart
+- [x] Shopping Cart Page
 - [x] Include a small pic
-- [ ] Clicking check out pops up an alert message, saying feature not yet implemented.
-- [ ] ESLint A11y
+- [x] Clicking check out pops up an alert message, saying feature not yet implemented.
+- [x] ESLint A11y
 - [ ] Add more items?
 - [ ] Change VIEW CART button to match theme (green/blue)
 
