@@ -1,3 +1,34 @@
+## Links
+
+- [Deploymed via AWS S3](http://chromatic-threads.s3-website.us-east-2.amazonaws.com/cart)
+- [Github Repo (source code)](https://github.com/0xBN/ecom-plp)
+
+## Preview
+
+| Type | Image | 
+| ----------- | ----------- |
+| Mobile | <img src="https://github.com/0xBN/gif_pub/blob/main/garrett_plp/Screenshot%202023-03-18%20113254.png?raw=true" width="250px"/> | 
+| Desktop | <img src="https://github.com/0xBN/gif_pub/blob/main/garrett_plp/Screenshot%202023-03-18%20113106.png?raw=true" width="250px"/> | 
+| Prototype | <img src="https://github.com/0xBN/gif_pub/blob/main/garrett_plp/Image_00001.jpg?raw=true" width="250px"/> | 
+
+
+## How To Run Locally
+1. Clone this repository
+2. Change into repository directory
+3. Run code below in root directory to install all dependencies
+   ```
+   npm install
+   ```
+4. To launch on localhost run command 
+   ```
+   npm run start
+   ```
+___
+
+
+ 
+
+
 ## Current To Do
 - [x] Product Detail Page
 - [x] Make it look neat, add an Add To Cart
@@ -5,7 +36,7 @@
 - [x] Include a small pic
 - [x] Clicking check out pops up an alert message, saying feature not yet implemented.
 - [x] ESLint A11y
-- [ ] Add more items?
+- [x] Add more items?
 - [x] Change VIEW CART button to match theme (green/blue)
 
 ## PLP Page features / functionality
@@ -29,17 +60,19 @@ devices.
 - [x] A form allowing the user to filter the products by price range
 - [x] A display of products, each with their name, price, image, and description.
 - [x] A button (or functionality) to view a product's details.
-- [ ] Implement pagination for the product list.
 - [x] Add additional filters (e.g., by color, size, etc.)
 - [x] Add a shopping cart feature that allows users to add products and display the total cost.
-- [ ] Provide GitHub repo.
-- [ ] README explains how to run code and any dependencies to be installed.
-- [ ] Additional notes
+- [x] Provide GitHub repo.
+- [x] README explains how to run code and any dependencies to be installed.
+- [x] Additional notes
+
+## Future Feature
+- [ ] Implement pagination for the product list.
 
 ## Other checklist
 - [x] Fix favicon
 - [x] Update metadata
-- [ ] Upload prototype / wireframe
+- [x] Upload prototype / wireframe
 - [x] Guest checkout for now
 
 ## Evaluation
