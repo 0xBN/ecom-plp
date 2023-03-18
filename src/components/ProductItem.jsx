@@ -1,24 +1,29 @@
 const ProductItem = ({ name, price, image, description, sizes, color }) => {
   return (
-    <div>
-      <hr />
-      <h2>{name}</h2>
-      <p>${price}</p>
-      <p>{description}</p>
-      <p>Color: {color}</p>
+    <div className={`py-4 grid place-content-center hover:saturate-200`}>
+      <h3 className={`text-center font-bold`}>
+        {name} - ${price}
+      </h3>
+
+      {/* <p>{description}</p> */}
+      {/* <p>Color: {color}</p> */}
       {sizes && (
         <div>
-          <p>Available sizes:</p>
-          <ul>
+          {/* <p>Available sizes:</p> */}
+          {/* <ul>
             {sizes.map((size) => (
               <li key={size} data-testid='sizes'>
                 {size}
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       )}
-      <img src={image} alt={name} />
+      <img
+        className={`md:rounded-md md:w-72 md:h-72 object-cover w-screen brightness-75 hover:brightness-100`}
+        src={image}
+        alt={name}
+      />
     </div>
   );
 };

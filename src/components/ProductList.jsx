@@ -50,11 +50,9 @@ const ProductList = ({ products }) => {
   ));
 
   return (
-    <div>
-      <h2>List</h2>
-
+    <div className={``}>
       {!productList?.length && <p>No products found</p>}
-      <ul>{productList}</ul>
+      <ul className={`md:grid md:grid-cols-4 sm:grid-cols-3`}>{productList}</ul>
     </div>
   );
 };

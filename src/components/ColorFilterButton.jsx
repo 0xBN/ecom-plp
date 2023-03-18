@@ -8,13 +8,17 @@ const ColorFilterButton = ({ color, isActive }) => {
     setColorFilter(color);
   };
 
+  const colorStyle = {
+    backgroundColor: color,
+  };
+
   return (
     <button
       data-testid={`color-filter-button`}
       className={isActive ? 'active' : ''}
       onClick={() => handleColorFilterChange(color)}
     >
-      {color}
+      <div className={`w-6 h-6 rounded-md`} style={colorStyle} />
     </button>
   );
 };

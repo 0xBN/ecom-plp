@@ -12,6 +12,7 @@ const ResetFilterButton = () => {
   } = useContext(ProductsContext);
 
   const handleResetClick = () => {
+    console.log({ originalOrder });
     setPriceRange({ min: 0, max: 100 });
     setSizeFilter(null);
     setColorFilter(null);
@@ -19,7 +20,14 @@ const ResetFilterButton = () => {
     setProducts(originalOrder);
   };
 
-  return <button onClick={handleResetClick}>Reset Filters</button>;
+  return (
+    <button
+      onClick={handleResetClick}
+      className={`border bg-red-800 rounded-md hover:bg-red-500 `}
+    >
+      Reset Filters
+    </button>
+  );
 };
 
 export default ResetFilterButton;

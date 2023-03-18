@@ -187,6 +187,8 @@ export const ProductsProvider = ({ children }) => {
         sizesTotalCost,
         setSizesTotalCost,
         updateSizesTotalCost,
+        originalOrder,
+        setOriginalOrder,
       }}
     >
       {children}

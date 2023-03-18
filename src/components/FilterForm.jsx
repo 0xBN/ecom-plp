@@ -16,8 +16,7 @@ const FilterForm = () => {
 
   return (
     <div>
-      <h2>Filter Form</h2>
-      <div>
+      {/* <div className={`flex flex-col`}>
         {priceRanges.map(({ min, max }) => (
           <PriceRangeButton
             key={`${min}-${max}`}
@@ -26,8 +25,8 @@ const FilterForm = () => {
             isActive={min === priceRange.min && max === priceRange.max}
           />
         ))}
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         {sizes.map((size) => (
           <SizeFilterButton
             key={size}
@@ -35,12 +34,12 @@ const FilterForm = () => {
             isActive={size === sizeFilter}
           />
         ))}
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         {uniqueColorList.map((color) => (
           <ColorFilterButton key={color} color={color} />
         ))}
-      </div>
+      </div> */}
       <div>
         <button onClick={sortProductsByPriceLowToHigh}>
           Price: Low to High
