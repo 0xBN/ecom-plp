@@ -36,16 +36,17 @@ const ProductList = ({ products }) => {
 
   const productList = filteredProducts?.map((product) => (
     <li key={product.id}>
-      <Link to={`/product/${product.id}`}>
-        <ProductItem
-          name={product.name}
-          price={product.price}
-          image={product.image}
-          description={product.description}
-          sizes={product.sizes}
-          color={product.color}
-        />
-      </Link>
+      {/* <Link to={`/product/${product.id}`}> */}
+      <ProductItem
+        id={product.id}
+        name={product.name}
+        price={product.price}
+        image={product.image}
+        description={product.description}
+        sizes={product.sizes}
+        color={product.color}
+      />
+      {/* </Link> */}
     </li>
   ));
 

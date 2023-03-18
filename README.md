@@ -1,3 +1,7 @@
+## Current To Do
+- [ ] Product Detail Page
+- [ ] Shopping Cart Page
+
 ## PLP Page features / functionality
 - [x] Display products, each with their name, price, image, and description.
 - [x] Allow the user to filter the list of products based on their price range.
@@ -15,7 +19,7 @@ devices.
 - [x] size: size of the item
 
 ## Deliverables
-- [ ] A header displaying the title of the page
+- [x] A header displaying the title of the page
 - [x] A form allowing the user to filter the products by price range
 - [x] A display of products, each with their name, price, image, and description.
 - [x] A button (or functionality) to view a product's details.

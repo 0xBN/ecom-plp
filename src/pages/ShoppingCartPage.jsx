@@ -2,7 +2,7 @@ import { ShoppingCart } from '../components';
 
 const ShoppingCartPage = () => {
   return (
-    <div>
+    <div className={`min-h-screen`}>
       <ShoppingCart />
     </div>
   );

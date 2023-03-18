@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { Header, Footer } from './components';
 import {
   ProductListingPage,
   ProductDetailPage,
@@ -18,6 +18,7 @@ const App = () => {
           <Route path='/cart' element={<ShoppingCartPage />} />
           <Route path='/about' element={<About />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );

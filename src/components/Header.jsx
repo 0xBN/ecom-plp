@@ -25,7 +25,8 @@ const Header = () => {
   return (
     <nav className={`md:flex justify-between sticky top-0 z-50`}>
       <div className='navbar bg-base-100 justify-between'>
-        <div className='dropdown'>
+        {/* MAIN */}
+        <div className='dropdown '>
           <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
             <FilterSVG />
           </label>
@@ -118,12 +119,12 @@ const Header = () => {
                 <span className='font-bold text-lg'>
                   {cartItems.length} Items
                 </span>
-                <span className='text-info'>
+                <span className='text-pink-400'>
                   Subtotal: ${totalCost.toFixed(2)}
                 </span>
                 <div className='card-actions'>
                   <Link to='/cart'>
-                    <button className='btn btn-primary btn-block'>
+                    <button className='btn btn-primary btn-block bg-yellow-500 text-black hover:bg-yellow-300'>
                       View cart
                     </button>
                   </Link>
